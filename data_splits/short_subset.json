@@ -1,0 +1,20 @@
+{
+ "split": "short_subset",
+ "derived_from": "dev.json",
+ "max_duration_s": 600.0,
+ "rule": "10 dev recordings of at most 600 s, chosen deterministically: the 3 with the most order errors among recordings dominated by order errors, the 3 with the most missing steps among recordings dominated by missing steps, the shortest recording with both error types, and the 3 shortest normal recordings; at most one recording per recipe in the first three groups, ties broken by the shorter recording.",
+ "error": [
+  "9_45",
+  "22_30",
+  "1_49",
+  "10_26",
+  "13_12",
+  "7_32",
+  "8_50"
+ ],
+ "normal": [
+  "12_12",
+  "8_19",
+  "9_13"
+ ]
+}

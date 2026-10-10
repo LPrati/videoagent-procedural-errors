@@ -1,0 +1,20 @@
+{
+ "split": "frontier_subset",
+ "derived_from": "dev.json",
+ "seed": 20260916,
+ "rule": "10 dev recordings chosen by the number of annotated errors: among the error recordings of dev.json, the 4 with the most steps tagged Order Error (stable descending sort, in file order), then, among the rest, the 3 with the most steps tagged Missing Step; plus 3 normal recordings drawn with random.Random(20260916).sample(dev['normal'], 3).",
+ "error": [
+  "16_28",
+  "23_38",
+  "15_41",
+  "20_26",
+  "22_137",
+  "10_26",
+  "26_34"
+ ],
+ "normal": [
+  "27_15",
+  "2_8",
+  "16_10"
+ ]
+}

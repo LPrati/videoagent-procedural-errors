@@ -1,0 +1,63 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the monograph it accompanies."
+title: "VideoAgent for procedural error detection: reproduction code"
+license: Apache-2.0
+type: software
+authors:
+  - family-names: Prati
+    given-names: Leonardo Giovanni
+repository-code: "https://github.com/LPrati/videoagent-procedural-errors"
+version: 0.1.0
+keywords:
+  - video agents
+  - multimodal language models
+  - procedural error detection
+  - VideoAgent
+  - CaptainCook4D
+preferred-citation:
+  type: thesis
+  title: "Agentes de vídeo para verificação de conformidade procedimental: avaliação do VideoAgent na detecção de erros procedimentais"
+  authors:
+    - family-names: Prati
+      given-names: Leonardo Giovanni
+  thesis-type: "Monografia (MBA em Inteligência Artificial e Big Data)"
+  institution:
+    name: "Instituto de Ciências Matemáticas e de Computação, Universidade de São Paulo"
+    city: "São Carlos"
+    country: BR
+  year: 2026
+  languages:
+    - por
+  url: "https://github.com/LPrati/videoagent-procedural-errors"
+references:
+  - type: conference-paper
+    title: "VideoAgent: A Memory-augmented Multimodal Agent for Video Understanding"
+    authors:
+      - family-names: Fan
+        given-names: Yue
+      - family-names: Ma
+        given-names: Xiaojian
+      - family-names: Wu
+        given-names: Rujie
+      - family-names: Du
+        given-names: Yuntao
+      - family-names: Li
+        given-names: Jiaqi
+      - family-names: Gao
+        given-names: Zhi
+      - family-names: Li
+        given-names: Qing
+    conference:
+      name: "European Conference on Computer Vision (ECCV)"
+    year: 2024
+    doi: "10.1007/978-3-031-72670-5_5"
+  - type: conference-paper
+    title: "CaptainCook4D: A Dataset for Understanding Errors in Procedural Activities"
+    authors:
+      - family-names: Peddi
+        given-names: Rohith
+      - name: "et al."
+    conference:
+      name: "Conference on Neural Information Processing Systems (NeurIPS), Datasets and Benchmarks Track"
+    year: 2024
+    url: "https://arxiv.org/abs/2312.14556"

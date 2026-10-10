@@ -1,0 +1,15 @@
+{preamble}
+
+These are the steps of the recipe:
+
+{steps}
+
+These are the ordering constraints of the recipe. A prerequisite of a step must be performed before that step:
+
+{prerequisites}
+
+Was the recipe followed correctly in this video? Answer "no" if any step was skipped, performed out of order, or performed incorrectly; otherwise answer "yes".
+
+Answer with this JSON object and nothing else:
+
+{"followed": "yes"|"no", "justification": "<one or two sentences: what went wrong and where, or why you judge the recipe was followed>"}

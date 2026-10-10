@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+
+# Secrets (API keys are read from a git-ignored .env at the repository root)
+.env
+
+# Data and outputs: nothing derived from the datasets is versioned
+data/
+videos/
+preprocess/
+runs/
+reports/
+*.mp4
+*.npy
+*.pkl
+
+# Logs, model weights, notebooks and local tool files
+*.log
+nohup.out
+*.pt
+*.safetensors
+.ipynb_checkpoints/
+transcript*.json
+noise_floor*.json
+.claude/
+CLAUDE.md
+AGENTS.md

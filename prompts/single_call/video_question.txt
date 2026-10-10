@@ -1,0 +1,23 @@
+The video shows one person making {recipe_name}: a single attempt at the recipe, from the first step to the last. You are given the whole video, sampled at {fps} frames per second; it is {duration_s} seconds long.
+
+These are the steps of the recipe:
+
+{steps}
+
+These are the ordering constraints of the recipe. A prerequisite of a step must be performed before that step. The constraints chain: if step A must come before step B, and step B before step C, then step A must also come before step C. Steps with no constraint between them, direct or through other steps, may be performed in any order; the order of the list above is only one of the valid orders:
+
+{prerequisites}
+
+For every step in the list above, decide two things.
+
+1. Execution. Was the step performed in this video? Answer "yes", "no", or "unsure" when the evidence is not enough to decide. When you answer "yes", say where you saw the step, as a time span in seconds from the start of the video [start, end].
+
+2. Order. Answer this only for a step you answered "yes" to. The order of the step is a violation when it was performed out of order with another performed step it is constrained with, directly or through other steps: a step that must come before it was performed after it, or a step that must come after it was performed before it. A step counts as performed after another only if it starts after the other one ends. When two steps are out of order, both of them are violations: the one that came too early and the one that came too late. For example, if step 3 must come before step 7 and step 7 was performed first, both step 3 and step 7 are violations. A step that was not performed at all makes no other step a violation; it is answered "no" under Execution. Otherwise the order is ok. Answer "ok", "violation", or "unsure" when the evidence is not enough to decide. When you answer "violation", name one step it is out of order with and, if you saw it, the time span where it was performed.
+
+Answer for every step of the list, including the steps you are unsure about.
+
+First write one short line per step saying what you saw. Then end with a line that starts with "Final Answer:" followed by this JSON object and nothing else:
+
+{schema}
+
+In that object: "span_s" is null when you cannot place the step in the video; "order" is null unless "executed" is "yes"; "violated_prerequisite" is null unless "order" is "violation".

@@ -1,0 +1,49 @@
+[project]
+name = "video-agent"
+version = "0.1.0"
+description = "Open reimplementation of VideoAgent, evaluated on procedural error detection in CaptainCook4D"
+readme = "README.md"
+license = "Apache-2.0"
+authors = [
+    { name = "Leonardo Prati" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.1",
+    "opencv-python-headless>=5.0.0.93",
+]
+
+[project.optional-dependencies]
+agent = [
+    "openai>=1.50",
+]
+models = [
+    "accelerate>=1.14.0",
+    # ViCLIP's remote code imports einops directly.
+    "einops>=0.8",
+    # ViCLIP's remote code imports fvcore at module level.
+    "fvcore>=0.1.5",
+    # PE-Core ships its two towers for open_clip, not for transformers
+    # (see adapters/aligner.py); it also brings the timm the vision tower
+    # and ViCLIP's remote code need.
+    "open-clip-torch>=3.0",
+    "pillow>=12.3.0",
+    "sentence-transformers>=3.0",
+    # ViCLIP's text tower still does `from pkg_resources import packaging`,
+    # which setuptools removed in 81. Drop this pin with the ViCLIP adapter.
+    "setuptools<81",
+    "supervision>=0.30.0",
+    "torch>=2.7",
+    "torchvision>=0.28.0",
+    "trackers>=2.0",
+    "transformers>=4.57",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.21,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
